@@ -2,7 +2,8 @@ var $containerDiv = $('<div></div>');
 var newGridSize;
 var viewportHeight;
 var viewportWidth;
-
+var mouseDown = false;
+ 
 $(document).ready(function() {
 	viewportHeight = $(window).height();
 	viewportWidth = $(document).width();
@@ -63,6 +64,6 @@ var resetBoard = function() {
 	} else {
 		gridCols = (viewportWidth/gridUnitSize) - Math.floor((viewportWidth/gridUnitSize)*.05);
 	}
-	
+
 	createGrid(gridRows, gridCols, gridUnitSize);
 }
